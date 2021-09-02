@@ -96,7 +96,7 @@ function Home() {
             {posts
               .filter(post => post.user.name.includes(authorsSearch))
               .map(post => (
-                <tr>
+                <tr key={post.id}>
                   <td>
                     <img
                       src="https://via.placeholder.com/40x40"

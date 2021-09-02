@@ -56,6 +56,12 @@ export const getUsers = async (): Promise<User[]> => {
   }
 };
 
+export const getUser = async (id: string): Promise<User> => {
+  const { data: user } = await api.get<User>(`/users/${id}`);
+
+  return user;
+};
+
 export const getPosts = async (limit = 5, page = 0): Promise<ApiPost[]> => {
   try {
     const { data } = await api.get<ApiPost[]>(
@@ -72,4 +78,18 @@ export const getPosts = async (limit = 5, page = 0): Promise<ApiPost[]> => {
 
     return [];
   }
+};
+
+export const getPost = async (id: string): Promise<Post> => {
+  const { data: post } = await api.get<ApiPost>(`/posts/${id}`);
+
+  const user = await getUser(String(post.userId));
+  const { id: postId, body, title } = post;
+
+  return {
+    id: postId,
+    body,
+    title,
+    user,
+  };
 };

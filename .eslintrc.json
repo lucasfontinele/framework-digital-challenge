@@ -29,9 +29,9 @@
     "react/jsx-filename-extension": [
       1,
       {
-      "extensions": [
-        ".tsx"
-      ]
+        "extensions": [
+          ".tsx"
+        ]
       }
     ],
     "no-use-before-define": "off",
@@ -39,7 +39,6 @@
       "error"
     ],
     "react/react-in-jsx-scope": "off",
-    "prettier/prettier": "error",
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -47,8 +46,14 @@
         "ts": "never",
         "tsx": "never"
       }
-   ],
-   "@typescript-eslint/explicit-module-boundary-types": "off"
+    ],
+    "prettier/prettier": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+    "camelcase": "off"
   },
   "settings": {
     "import/resolver": {

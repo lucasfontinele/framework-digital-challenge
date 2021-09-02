@@ -1,5 +1,6 @@
 import React, { useCallback, useState, useEffect } from 'react';
 
+import { Link } from 'react-router-dom';
 import DefaultLayout from 'layouts/DefaultLayout';
 
 import GridContainer from 'components/GridContainer';
@@ -96,7 +97,7 @@ function Home() {
             {posts
               .filter(post => post.user.name.includes(authorsSearch))
               .map(post => (
-                <tr>
+                <Link to={`/post/${post.id}`} key={post.id}>
                   <td>
                     <img
                       src="https://via.placeholder.com/40x40"
@@ -115,7 +116,7 @@ function Home() {
                       })}
                     </p>
                   </td>
-                </tr>
+                </Link>
               ))}
           </table>
         </PostsContainer>

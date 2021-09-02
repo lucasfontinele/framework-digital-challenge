@@ -42,11 +42,16 @@ export const PostsContainer = styled.div`
     border-bottom: 1px solid #e6e8eb;
   }
 
+  a,
   tr {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    text-decoration: none;
+    padding: 12px;
+    border-bottom: 1px solid #e6e8eb;
   }
 
   th,

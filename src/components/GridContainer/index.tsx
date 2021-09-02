@@ -4,10 +4,15 @@ import { Container } from './styles';
 
 type GridContainerProps = {
   children: ReactNode;
+  sm?: boolean;
 };
 
-function GridContainer({ children }: GridContainerProps) {
-  return <Container>{children}</Container>;
+function GridContainer({ children, sm = false }: GridContainerProps) {
+  return <Container sm={sm}>{children}</Container>;
 }
+
+GridContainer.defaultProps = {
+  sm: false,
+};
 
 export default GridContainer;

@@ -22,7 +22,7 @@ function SearchBar({ onSearch }: SearchBarProps) {
   return (
     <Wrapper>
       <Search
-        placeholder="Digite aqui"
+        placeholder="Digite o nome do autor"
         value={search}
         onChange={handleSearch}
         onKeyDown={handleKeyDown}
